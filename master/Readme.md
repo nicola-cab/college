@@ -14,10 +14,10 @@ Thus the idea of writing an embarrassingly parallel algorithm looked the right d
 I wrote a entry point set of routines in order to allow a C application to talk with fortran, solving common problems like matrix row, column order, memory representation of matrices and so on. On top of this I implemented 2 lightweight libraries, one to transform the fortran parallel algorithm into a server and the other one to transform a monte carlo control simulation algorithm into a client for each molecular dynamic replica running in the cluster. These 2 applications were able to communicate to each other using a custom designed application protocol running on top of TCP sockets.  
 
 **Molecular dynamic server:**  
-The logic adopted to implement this was simple. Select always core 1 as the core dedicated to run the instance of the server (essentially implementing the protocol), gathering a set of molecular position arrays, plus forces and any other physical parameter, scattering them among the other cores and re-gathering the output to be returned to the monte carlo controller that asked for a simulation
+The logic adopted to implement this was simple. Select always core 1 as the core dedicated to run the instance of the server (essentially implementing the protocol), gathering a set of molecular position arrays, plus forces and any other physical parameter, scattering them among the other cores and re-gathering the output to be returned to the monte carlo controller that asked for a simulation.
 
 **Monte carlo client:**    
-This application was already written and the logic implemented. The only one thing I implemented was the socket programming part in order to implement the protocol and the wrap-up of such functionality into a set of APIs
+This application was already written and the logic implemented. The only one thing I implemented was the socket programming part in order to implement the protocol and the wrap-up of such functionality into a set of APIs.
 
 **Protocol and system :**  
 The protocol was simple enough. At the beginning each replica of the server running in the cluster had to write  into a common area its ip and port in order to be contacted by the monte carlo controller. As soon the monte carlo controller wanted to initiate a simulation it needed to send the appropriate message and send the appropriate physical vector parameters to start the simulation. The protocol was able to take care of busy servers and re-allocation of computations among the cluster as well as closing the simulation flow once the computation was done.
