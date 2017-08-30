@@ -12,4 +12,4 @@ All the events where collected and dumped into an user space/kernel space circul
 
 The user space application is simple and composed by 2 tasks, one for reading the buffer (triggered by the kernel itself) and the other one for pushing data into a binary file, read by a java plotting application (I did not touch that code too much, except for implementing a down sampling mechanism to cope with all the events, then I did not put it in here).
 
-**Note: code can be fuzzy :-)**
+**Note: code can be fuzzy along with bad name conventions :-)**
