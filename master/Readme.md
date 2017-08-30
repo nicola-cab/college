@@ -3,7 +3,7 @@
 
 ***Description:***  
 
-The aim of this project was to bring and build a library for a fortran based algorithm to simulate the molecular dynamic of simple liquids into the the era of new computing, trying to increase the complexity of the proteins that were computable at that time, exploiting the capabilities of a HPC cluster.  
+The aim of this project was to bring and build a library for a fortran based algorithm to simulate the molecular dynamic of simple proteins into the the era of new computing, trying to increase the complexity of the proteins that were computable at that time, exploiting the capabilities of a HPC cluster.  
 
 The program used to simulate the molecular dynamic was writen in fortran, thus not suitable for implementing complex system programming tasks like using socket programming and/or using linux system calls. Moreover it was not suitable to be scaled up.  
 
