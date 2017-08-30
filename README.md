@@ -12,5 +12,5 @@ A distributed parallelized C/C++ application that uses OpenMPI to run several re
 **Technologies:** C, linux system programming, socket programming, open mpi.
 
 3. ***Distributed network application:***
-A C client/server application to implement an application protocol on top of tcp berkeley sockets for linux, in order to discover and download multimedia files into a distributed network of nodes.
+A C client/server application to implement an application protocol on top of tcp berkeley sockets for linux, in order to discover and download multimedia files into a distributed network of nodes.  
 **Technologies:** C, linux, socket programming, systeme programming.
