@@ -1,7 +1,7 @@
 # Bachelor's degree project
 =====================
 
-*** Description: ***
+*** Description: ***  
 The project was aimed to get a reliable and efficient way for monitoring the events inside the linux kernel. In particular the main goal was to have a way of dumping the scheduler contex switches and all the hard/soft interrupts.   
   
 The main problem was to do so in the fastest way possible withouth impacting too much the system itself. We had a linux kernel 2.6 recompiled within a couple of function pointers defined globally in order to be triggered for every context switch and interrupt handler invokation.  
