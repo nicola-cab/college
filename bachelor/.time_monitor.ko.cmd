@@ -1,1 +1,0 @@
-cmd_/home/studente/Desktop/monitor_linux_kernel/time_monitor.ko := ld -m elf_i386 -r -m elf_i386   -o /home/studente/Desktop/monitor_linux_kernel/time_monitor.ko /home/studente/Desktop/monitor_linux_kernel/time_monitor.o /home/studente/Desktop/monitor_linux_kernel/time_monitor.mod.o
